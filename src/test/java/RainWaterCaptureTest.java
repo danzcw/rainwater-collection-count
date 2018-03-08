@@ -33,66 +33,46 @@ public class RainWaterCaptureTest {
             Assert.assertEquals(expected,actual);
     }
 
-//    @Test
-//    public void testGetHighestWallToTheRight() {
-//        waterTrapped = new TrappingRain();
-//        Integer[]wallHeightTest = {13,5,8,9,3,0};
-//        Integer testWallAtIndex = 1;
-//        Integer expected = 9;
-//        Integer actual = waterTrapped.getHighestWallToTheRight(wallHeightTest,testWallAtIndex);
-//
-//        Assert.assertEquals(expected,actual);
-//    }
-//    @Test
-//    public void testGetHeighestWallToTHeRight2(){
-//        waterTrapped = new TrappingRain();
-//        Integer[]wallHeightTest = {3,21,13,8,15,9,10,0};
-//        Integer testWallAtIndex = 7;
-//        Integer expected = 0;
-//        Integer actual = waterTrapped.getHighestWallToTheRight(wallHeightTest,testWallAtIndex);
-//
-//        Assert.assertEquals(expected,actual);
-//    }
-//
-//    @Test
-//    public void testGetWaterTrappedAtIndex() {
-//        waterTrapped = new TrappingRain();
-//        Integer[]wallHeightTest = {11,9,7,16,0,1};
-//        Integer indexOfWall =2;
-//        Integer expected = 4;
-//        Integer actual =waterTrapped.getWaterTrappedAtIndex(wallHeightTest,indexOfWall);
-//
-//        Assert.assertEquals(expected,actual);
-//    }
-//
-//    @Test
-//    public void testGetTotalWaterTrapped1() {
-//        waterTrapped = new TrappingRain();
-//        Integer[]wallHeightTest = {7,4,0,9};
-//        Integer expected =10;
-//        Integer actual = waterTrapped.getTotalWaterTrapped(wallHeightTest);
-//
-//        Assert.assertEquals(expected,actual);
-//    }
-//    @Test
-//    public void testGetTotalWaterTrapped2(){
-//        waterTrapped = new TrappingRain();
-//        Integer[]wallHeightTest ={4,7,3,11,2,13,1,0};
-//        Integer expected =13;
-//        Integer actual = waterTrapped.getTotalWaterTrapped(wallHeightTest);
-//
-//        Assert.assertEquals(expected,actual);
-//    }
-//    @Test
-//    public void testGetTotalWaterTrapped3(){
-//        Integer trapped = new Integer();
-//        Integer[]wallHeightTest = {11,2,18,21,33,3,1,7,15};
-//
-//        Integer expected= 43;
-//        Integer actual = trapped.rainWater (wallHeightTest);
-//
-//        Assert.assertEquals(expected,actual);
-//    }
+    @Test
+    public void testTotalReturned2(){
+
+        Integer[] walls ={1,9,12,0,0,0,9};
+        Integer expected = 27;
+        Integer actual = tester.rainWaterRetained(walls);
+
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testTotalReturned3(){
+
+        Integer[] walls ={3,1,2,7,4,0,9,12,4,3,18};
+        Integer expected = 30;
+        Integer actual = tester.rainWaterRetained(walls);
+
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testTotalReturned4(){
+
+        Integer[] walls ={2,1};
+        Integer expected = 0;
+        Integer actual = tester.rainWaterRetained(walls);
+
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testTotalReturned5(){
+
+        Integer[] walls ={24,0,3,8,21,0,21};
+        Integer expected = 73;
+        Integer actual = tester.rainWaterRetained(walls);
+
+        Assert.assertEquals(expected,actual);
+    }
+
 
 }
 
